@@ -1,30 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "ReplaceChromeTranslation",
-    "description": "Base Level Extension",
-    "version": "1.0",
-    "action": {
-      "default_icon": "logo.png"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"],
-        "runAt": "document_idle"
-      }
-    ],
-    "permissions": [
-      "contextMenus",
-      "activeTab",
-      "sidePanel",
-      "scripting",
-      "storage"
-    ],
-    "background":{
-      "service_worker": "background.js",
-      "openPanelOnActionClick": true
-    },
-    "side_panel": {
-      "default_path": "sidebar.html"
-    }
+  "manifest_version": 3,
+  "name": "ReplaceChromeTranslation",
+  "description": "Base Level Extension",
+  "version": "1.0",
+  "action": {
+    "default_icon": "logo.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "sidePanel",
+    "storage"
+  ],
+  "background":{
+    "service_worker": "background.js",
+    "openPanelOnActionClick": true
+  },
+  "side_panel": {
+    "default_path": "sidebar.html"
+  }
 }
